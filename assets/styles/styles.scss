@@ -59,9 +59,9 @@ body {
     border-right: 2px solid #fff;
     @include tablet() {
       top: 0px;
-      left: -10px;
+      left: -15px;
       border-radius: 3px;
-      height: calc(100% + 20px);
+      height: calc(100% + 19px);
       width: 35px;
       border-right: 5px solid #fff;
     }
@@ -78,10 +78,11 @@ body {
     border-radius: 2px;
     border-left: 2px solid #fff;
     @include tablet() {
-      height: calc(100% + 18px);
+      height: calc(100% + 19px);
       width: 30px;
-      right: -6px;
-      top: -18px;
+      right: -12px;
+      top: -17px;
+      transform: rotate(-38deg);
       border-radius: 3px;
       border-left: 5px solid #fff;
     }
@@ -89,21 +90,29 @@ body {
 }
 
 .title {
-  letter-spacing: -1.6px;
-  font: normal normal 400 40px/35px Montserrat;
-  @include tablet() {
-    font: normal normal 800 80px/70px Montserrat;
-  }
   font-family: "Montserrat-ExtraBold";
   color: #fff;
   position: relative;
   z-index: 2;
+  letter-spacing: -1.6px;
+  font: normal normal 800 40px/35px Montserrat;
+  @include tablet() {
+    font: normal normal 800 80px/70px Montserrat;
+  }
+  @include desktop() {
+    font-size: 120px;
+    // letter-spacing: -2px;
+    line-height: 110px;
+  }
 }
 .desc {
   position: relative;
-  font: normal normal normal 14px/17px Montserrat;
+  font: normal normal normal 20px/23px Montserrat;
   @include tablet() {
     font: normal normal normal 28px/34px Montserrat;
+  }
+  @include desktop() {
+    font-size: 30px;
   }
   font-family: "Montserrat-Regular";
   letter-spacing: 0px;
@@ -113,6 +122,9 @@ body {
 
 .header {
   background-color: #7f6677;
+  @include desktop() {
+    padding-bottom: 215px;
+  }
 
   &-navbar {
     display: flex;
@@ -121,12 +133,18 @@ body {
     @include tablet() {
       padding: 12px 12px 25px 19px;
     }
+    @include desktop() {
+      align-items: flex-start;
+    }
     position: relative;
     z-index: 3;
     &-bar {
       width: 36px;
       @include tablet() {
         width: 72px;
+      }
+      @include desktop() {
+        display: none;
       }
       position: relative;
       z-index: 10;
@@ -212,12 +230,26 @@ body {
         padding-bottom: 90px;
       }
 
+      @include desktop() {
+        position: unset;
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        > ul {
+          display: flex;
+        }
+      }
+
       input {
         display: none;
         &:checked + {
           ul.subMenu {
             max-height: 520px;
             transition: max-height 0.3s;
+
+            @include desktop() {
+              padding-top: 15px;
+            }
           }
         }
       }
@@ -227,20 +259,49 @@ body {
         @include tablet() {
           margin-bottom: 30px;
         }
+        @include desktop() {
+          margin-bottom: 0;
+          margin-right: 40px;
+        }
+
         position: relative;
       }
 
       > ul > li > a,
       > ul > li > label {
+        cursor: pointer;
         font: normal normal bold 32px/33px Montserrat;
         @include tablet() {
           font: normal normal bold 63px/77px Montserrat;
+        }
+        @include desktop {
+          font-size: 20px;
+          line-height: 1;
         }
         letter-spacing: 0px;
         color: #ffffff;
         text-decoration: none;
         font-family: "Montserrat-Bold";
         display: inline-block;
+        > img {
+          width: 50px;
+          @include tablet() {
+            width: 100px;
+          }
+          @include desktop() {
+            width: 40px;
+          }
+        }
+      }
+
+      > ul > li > label:hover {
+        @include desktop() {
+          ~ ul.subMenu {
+            max-height: 520px;
+            padding-top: 15px;
+            transition: all 0.5s;
+          }
+        }
       }
 
       .subMenu {
@@ -249,6 +310,14 @@ body {
         padding-left: 23px;
         @include tablet() {
           padding-left: 45px;
+        }
+        @include desktop() {
+          position: fixed;
+          width: 250px;
+          overflow: hidden;
+          background-color: #fff;
+          padding-left: 20px;
+          transition: all 0.5s;
         }
         transition: max-height 0.3s;
         > li {
@@ -287,6 +356,10 @@ body {
             @include tablet() {
               font: normal normal bold 50px/61px Montserrat;
             }
+            @include desktop() {
+              font-size: 20px;
+              line-height: 1;
+            }
             letter-spacing: 0px;
             font-family: "Montserrat-Bold";
             text-decoration: none;
@@ -300,7 +373,25 @@ body {
   &-banner {
     position: relative;
 
+    @include desktop() {
+      display: flex;
+    }
+
+    &__image {
+      @include desktop() {
+        width: 67%;
+      }
+    }
+
+    &__content {
+      @include desktop() {
+        flex: 1;
+        padding-top: 98px;
+      }
+    }
+
     &__title {
+      color: #fff;
       width: 100%;
       padding-left: 27px;
       padding-right: 48px;
@@ -310,7 +401,12 @@ body {
         padding-right: 97px;
         top: -107px;
       }
-      color: #fff;
+      @include desktop() {
+        width: calc(100% + 250px);
+        left: -550px;
+        top: 0;
+        padding: 0;
+      }
     }
 
     &__desc {
@@ -323,6 +419,12 @@ body {
         padding-right: 216px;
         width: 100%;
         top: -100px;
+      }
+      @include desktop() {
+        top: 0;
+        padding-left: 90px;
+        padding-right: 170px;
+        margin-top: 70px;
       }
     }
   }
@@ -338,6 +440,10 @@ body {
   @include tablet() {
     padding-top: 144px;
     padding-bottom: 192px;
+  }
+  @include tablet() {
+    padding-top: 221px;
+    padding-bottom: 284px;
   }
   &:before {
     position: absolute;
@@ -357,6 +463,11 @@ body {
       padding-left: 55px;
       padding-right: 10px;
     }
+    @include tablet() {
+      font-size: 112px;
+      padding-left: 130px;
+      padding-right: 350px;
+    }
   }
 
   &-desc {
@@ -368,6 +479,11 @@ body {
       padding-left: 122px;
       padding-right: 137px;
     }
+    @include tablet() {
+      margin-top: 54px;
+      padding-left: 441px;
+      padding-right: 936px;
+    }
   }
 }
 
@@ -377,12 +493,19 @@ body {
   @include tablet() {
     padding-bottom: 82px;
   }
+  @include desktop() {
+    padding-bottom: 0;
+  }
   &-logo {
-    padding-left: 27px;
+    margin-left: 27px;
     width: 68px;
     @include tablet() {
-      padding-left: 55px;
+      margin-left: 55px;
       width: 135px;
+    }
+    @include desktop {
+      margin-left: 217px;
+      width: 247px;
     }
   }
 
@@ -400,6 +523,10 @@ body {
       padding-left: 55px;
       padding-right: 148px;
     }
+    @include desktop() {
+      padding-left: 145px;
+      padding-right: 800px;
+    }
   }
 
   &-desc {
@@ -411,6 +538,11 @@ body {
       padding-left: 122px;
       padding-right: 104px;
     }
+    @include desktop() {
+      margin-top: 49px;
+      padding-left: 468px;
+      padding-right: 850px;
+    }
   }
 
   &-shape {
@@ -421,13 +553,21 @@ body {
       margin-top: 60px;
       padding-right: 44px;
     }
+    @include desktop() {
+      position: relative;
+      top: -200px;
+      margin-top: 0;
+    }
   }
 }
 
 .feature3 {
-  padding-top: 89px;
+  padding-top: 44px;
   @include tablet() {
-    padding-top: 44px;
+    padding-top: 89px;
+  }
+  @include tablet() {
+    padding-top: 70px;
   }
   background-color: #fff;
 
@@ -439,12 +579,19 @@ body {
     @include tablet() {
       padding-right: 61px;
     }
+    @include desktop() {
+      text-align: left;
+    }
   }
 
   &-title {
     padding-left: 84px;
     @include tablet() {
       padding-left: 168px;
+    }
+    @include desktop() {
+      padding-left: 550px;
+      padding-right: 300px;
     }
   }
 
@@ -453,15 +600,21 @@ body {
     @include tablet() {
       padding-left: 108px;
     }
+    @include desktop() {
+      padding-left: 1100px;
+      padding-right: 140px;
+    }
   }
 
   &-img {
     margin-top: 37px;
+    position: relative;
     @include tablet() {
       margin-top: 74px;
     }
-    position: relative;
-
+    @include desktop() {
+      width: 84%;
+    }
     &__desc {
       position: absolute;
       width: 100%;
@@ -471,6 +624,9 @@ body {
       padding: 42px 105px 47px 84px;
       @include tablet() {
         padding: 84px 210px 95px 168px;
+      }
+      @include desktop() {
+        padding: 260px 480px 220px 530px;
       }
     }
   }
@@ -488,8 +644,17 @@ body {
     @include tablet() {
       padding-left: 60px;
     }
+    @include desktop() {
+      padding-left: 130px;
+    }
     span {
       display: block;
+      &:nth-child(2),
+      &:nth-child(3) {
+        @include desktop() {
+          display: inline;
+        }
+      }
     }
   }
 
@@ -497,6 +662,11 @@ body {
     margin-top: 47px;
     @include tablet() {
       margin-top: 95px;
+    }
+    @include desktop() {
+      display: flex;
+      padding-left: 175px;
+      padding-right: 257px;
     }
 
     &__item {
@@ -572,9 +742,9 @@ body {
         font-family: "Montserrat-Bold";
         color: #fff;
         img {
-          width: 18px;
+          width: 10px;
           @include tablet() {
-            width: 10px;
+            width: 19px;
           }
         }
       }
@@ -593,10 +763,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include desktop() {
+      justify-content: flex-end;
+    }
     p {
       font-size: 18px;
+      margin-bottom: 10px;
       @include tablet() {
         font-size: 23px;
+      }
+      @include desktop() {
+        margin-left: 10px;
       }
       font-family: "Montserrat-Bold";
       &::before,
@@ -621,6 +798,14 @@ body {
   &-info {
     width: 100%;
     text-align: right;
+    @include desktop() {
+      flex: 1;
+      order: 2;
+      text-align: left;
+      display: flex;
+      padding-left: 140px;
+      align-items: flex-end;
+    }
 
     p {
       font: normal normal normal 10px/12px Montserrat;
@@ -630,6 +815,12 @@ body {
       letter-spacing: 0px;
       font-family: "Montserrat-Regular";
     }
+
+    &__logo {
+      @include desktop() {
+        margin-right: 20px;
+      }
+    }
   }
 
   &-logo {
@@ -637,12 +828,21 @@ body {
     @include tablet() {
       width: 180px;
     }
+    @include desktop() {
+      order: 1;
+      width: 200px;
+    }
   }
 
   &-text {
     font: normal normal normal 10px/10px Montserrat;
     @include tablet() {
       font: normal normal normal 15px/19px Montserrat;
+    }
+    @include desktop() {
+      flex: 1;
+      order: 3;
+      text-align: right;
     }
     letter-spacing: 0px;
     font-family: "Montserrat-Regular";
