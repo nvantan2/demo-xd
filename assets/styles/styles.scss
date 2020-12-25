@@ -417,6 +417,9 @@ body {
         left: 0;
         top: 0;
       }
+      @include desktop-large() {
+        padding-left: 700px;
+      }
     }
 
     &__desc {
@@ -434,9 +437,10 @@ body {
         top: 0;
         padding-left: 1080px;
         padding-right: 30px;
-        // padding: 0;
         margin-top: 70px;
-        // left: 67%;
+      }
+      @include desktop-large(){
+        padding-left: 1350px;
       }
     }
   }

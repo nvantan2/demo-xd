@@ -557,6 +557,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1920px) {
+  .header-banner__title {
+    padding-left: 700px;
+  }
+}
+
 .header-banner__desc {
   padding-left: 61px;
   padding-right: 108px;
@@ -579,6 +585,12 @@ body {
     padding-left: 1080px;
     padding-right: 30px;
     margin-top: 70px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .header-banner__desc {
+    padding-left: 1350px;
   }
 }
 
