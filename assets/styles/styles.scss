@@ -34,12 +34,12 @@ body {
   border-radius: 2px;
   padding: 0 20px;
   border: 2px solid #fff;
-  font: normal normal normal 14px/27px Montserrat;
+  font: normal normal normal 14px/27px "Montserrat-Medium";
   @include tablet {
     border-radius: 3px;
     padding: 0 40px;
     border: 5px solid #fff;
-    font: normal normal normal 28px/34px Montserrat;
+    font: normal normal normal 28px/34px "Montserrat-Medium";
   }
 
   font-family: "Montserrat-Medium";
@@ -66,7 +66,6 @@ body {
       border-right: 5px solid #fff;
       transform: rotate(-40deg);
     }
-    
   }
   &::after {
     content: "";
@@ -92,14 +91,13 @@ body {
 }
 
 .title {
-  font-family: "Montserrat-ExtraBold";
   color: #fff;
   position: relative;
   z-index: 2;
   letter-spacing: -1.6px;
-  font: normal normal 800 40px/35px Montserrat;
+  font: normal normal 800 40px/35px "Montserrat-ExtraBold";
   @include tablet() {
-    font: normal normal 800 80px/70px Montserrat;
+    font: normal normal 800 80px/70px "Montserrat-ExtraBold";
   }
   @include desktop() {
     font-size: 100px;
@@ -109,12 +107,13 @@ body {
     font-size: 120px;
     line-height: 110px;
   }
+  font-family: "Montserrat-ExtraBold";
 }
 .desc {
   position: relative;
-  font: normal normal normal 20px/23px Montserrat;
+  font: normal normal normal 20px/23px "Montserrat-Regular";
   @include tablet() {
-    font: normal normal normal 28px/34px Montserrat;
+    font: normal normal normal 28px/34px "Montserrat-Regular";
   }
   @include desktop() {
     font-size: 29px;
@@ -284,9 +283,9 @@ body {
       > ul > li > a,
       > ul > li > label {
         cursor: pointer;
-        font: normal normal bold 32px/33px Montserrat;
+        font: normal normal bold 32px/33px "Montserrat-Bold";
         @include tablet() {
-          font: normal normal bold 63px/77px Montserrat;
+          font: normal normal bold 63px/77px "Montserrat-Bold";
         }
         @include desktop {
           font-size: 20px;
@@ -308,9 +307,9 @@ body {
         }
       }
 
-      > ul > li > label:hover {
+      > ul > li:hover {
         @include desktop() {
-          ~ ul.subMenu {
+          > ul.subMenu {
             max-height: 520px;
             padding-top: 15px;
             transition: all 0.5s;
@@ -366,9 +365,9 @@ body {
           }
 
           & > a {
-            font: normal normal bold 25px/31px Montserrat;
+            font: normal normal bold 25px/31px "Montserrat-Bold";
             @include tablet() {
-              font: normal normal bold 50px/61px Montserrat;
+              font: normal normal bold 50px/61px "Montserrat-Bold";
             }
             @include desktop() {
               font-size: 20px;
@@ -441,7 +440,7 @@ body {
         padding-right: 30px;
         margin-top: 70px;
       }
-      @include desktop-large(){
+      @include desktop-large() {
         padding-left: 1350px;
       }
     }
@@ -450,7 +449,8 @@ body {
 
 .feature1 {
   position: relative;
-  background: transparent url("../images/banner1.jpg") 0% 0% no-repeat
+  opacity: 0.95;
+  background: transparent url("../images/EXPERTISE_PANNEAU_2.jpg") 0% 0% no-repeat
     padding-box;
   background-size: cover;
   padding-top: 72px;
@@ -466,16 +466,6 @@ body {
   @include desktop-large() {
     padding-top: 221px;
     padding-bottom: 284px;
-  }
-  &:before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(171, 211, 206, 0.4);
-    z-index: 1;
   }
 
   &-title {
@@ -764,11 +754,11 @@ body {
     }
 
     &__name {
-      font: normal normal bold 25px/25px Montserrat;
+      font: normal normal bold 25px/25px "Montserrat-ExtraBold";
       @include tablet() {
-        font: normal normal bold 50px/50px Montserrat;
+        font: normal normal bold 45px/45px "Montserrat-ExtraBold";
       }
-      font-family: "Montserrat-Bold";
+      font-family: "Montserrat-ExtraBold";
       letter-spacing: -1px;
       color: #ffffff;
 
@@ -781,9 +771,9 @@ body {
     }
 
     &__position {
-      font: normal normal normal 15px/18px Montserrat;
+      font: normal normal normal 15px/18px "Montserrat-Regular";
       @include tablet() {
-        font: normal normal normal 30px/37px Montserrat;
+        font: normal normal normal 30px/37px "Montserrat-Regular";
       }
       letter-spacing: 0px;
       color: #abd3ce;
@@ -875,11 +865,11 @@ body {
     }
 
     p {
-      font: normal normal normal 10px/12px Montserrat;
+      font: normal normal normal 10px/12px "Montserrat-Regular";
       @include tablet() {
-        font: normal normal normal 20px/24px Montserrat;
+        font: normal normal normal 20px/24px "Montserrat-Regular";
       }
-      @include desktop(){
+      @include desktop() {
         font-size: 15px;
         line-height: 18px;
       }
@@ -910,9 +900,9 @@ body {
   }
 
   &-text {
-    font: normal normal normal 10px/10px Montserrat;
+    font: normal normal normal 10px/10px "Montserrat-Regular";
     @include tablet() {
-      font: normal normal normal 15px/19px Montserrat;
+      font: normal normal normal 15px/19px "Montserrat-Regular";
     }
     @include desktop() {
       flex: 1;
