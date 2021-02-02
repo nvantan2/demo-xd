@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "Montserrat-Bold";
   src: url("../fonts/Montserrat-Bold.ttf");
@@ -20,6 +27,7 @@
 *,
 ::after,
 ::before {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -50,6 +58,8 @@ body {
     background-color: #7f6677;
     content: "";
     position: absolute;
+    -webkit-transform: rotate(-37deg);
+    -ms-transform: rotate(-37deg);
     transform: rotate(-37deg);
     top: 0px;
     left: -5px;
@@ -64,6 +74,8 @@ body {
       height: calc(100% + 19px);
       width: 35px;
       border-right: 5px solid #fff;
+      -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
       transform: rotate(-40deg);
     }
   }
@@ -71,6 +83,8 @@ body {
     content: "";
     background-color: #7f6677;
     position: absolute;
+    -webkit-transform: rotate(-34deg);
+    -ms-transform: rotate(-34deg);
     transform: rotate(-34deg);
     height: calc(100% + 10px);
     width: 20px;
@@ -83,6 +97,8 @@ body {
       width: 30px;
       right: -12px;
       top: -17px;
+      -webkit-transform: rotate(-38deg);
+      -ms-transform: rotate(-38deg);
       transform: rotate(-38deg);
       border-radius: 3px;
       border-left: 5px solid #fff;
@@ -134,13 +150,19 @@ body {
   }
 
   &-navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 25px 24px 50px 38px;
     @include tablet() {
       padding: 12px 12px 25px 19px;
     }
     @include desktop() {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
       align-items: flex-start;
       padding-top: 25px;
       padding-bottom: 50px;
@@ -171,6 +193,8 @@ body {
         width: 100%;
         background-color: #fff;
         top: 0;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
 
         &:nth-child(2) {
@@ -192,15 +216,21 @@ body {
       &:checked {
         & ~ .header-navbar-menu {
           left: 0;
+          -webkit-transition: left 0.3s;
+          -o-transition: left 0.3s;
           transition: left 0.3s;
         }
         & ~ .header-navbar-bar {
           .header-navbar-bar__item {
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
             &:nth-child(2) {
               display: none;
             }
             &:first-of-type {
+              -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
               transform: rotate(-45deg);
               top: 8px;
               @include tablet() {
@@ -208,6 +238,8 @@ body {
               }
             }
             &:last-of-type {
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
               transform: rotate(45deg);
               top: 9px;
               @include tablet() {
@@ -230,6 +262,8 @@ body {
       position: fixed;
       left: -80%;
       top: 0;
+      -webkit-transition: left 0.3s;
+      -o-transition: left 0.3s;
       transition: left 0.3s;
       background-color: #abd3ce;
       width: 80%;
@@ -249,6 +283,8 @@ body {
         padding: 0;
         width: auto;
         > ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
         }
       }
@@ -258,6 +294,8 @@ body {
         &:checked + {
           ul.subMenu {
             max-height: 520px;
+            -webkit-transition: max-height 0.3s;
+            -o-transition: max-height 0.3s;
             transition: max-height 0.3s;
 
             @include desktop() {
@@ -312,6 +350,8 @@ body {
           > ul.subMenu {
             max-height: 520px;
             padding-top: 15px;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
             transition: all 0.5s;
           }
         }
@@ -330,8 +370,12 @@ body {
           overflow: hidden;
           background-color: #fff;
           padding-left: 20px;
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
           transition: all 0.5s;
         }
+        -webkit-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
         transition: max-height 0.3s;
         > li {
           margin-bottom: 18px;
@@ -450,8 +494,8 @@ body {
 .feature1 {
   position: relative;
   opacity: 0.95;
-  background: transparent url("../images/EXPERTISE_PANNEAU_2.jpg") 0% 0% no-repeat
-    padding-box;
+  background: transparent url("../images/EXPERTISE_PANNEAU_2.jpg") 0% 0%
+    no-repeat padding-box;
   background-size: cover;
   padding-top: 72px;
   padding-bottom: 96px;
@@ -711,6 +755,8 @@ body {
       margin-top: 95px;
     }
     @include desktop() {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       padding-left: 175px;
       padding-right: 257px;
@@ -817,10 +863,17 @@ body {
   }
 
   &-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     @include desktop() {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end;
     }
     p {
@@ -845,9 +898,16 @@ body {
     @include tablet() {
       margin-top: 27px;
     }
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     color: #fff;
   }
@@ -856,11 +916,19 @@ body {
     width: 100%;
     text-align: right;
     @include desktop() {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
       flex: 1;
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
       order: 2;
       text-align: left;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       padding-left: 140px;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
       align-items: flex-end;
     }
 
@@ -894,6 +962,8 @@ body {
       width: 180px;
     }
     @include desktop() {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
       order: 1;
       width: 200px;
     }
@@ -905,7 +975,11 @@ body {
       font: normal normal normal 15px/19px "Montserrat-Regular";
     }
     @include desktop() {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
       flex: 1;
+      -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
       order: 3;
       text-align: right;
     }

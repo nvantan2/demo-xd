@@ -1,3 +1,9 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 @font-face {
   font-family: "Montserrat-Bold";
   src: url("../fonts/Montserrat-Bold.ttf");
@@ -22,7 +28,7 @@
 ::after,
 ::before {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -57,7 +63,7 @@ body {
   content: "";
   position: absolute;
   -webkit-transform: rotate(-37deg);
-          transform: rotate(-37deg);
+  transform: rotate(-37deg);
   top: 0px;
   left: -5px;
   border-radius: 2px;
@@ -75,7 +81,7 @@ body {
     width: 35px;
     border-right: 5px solid #fff;
     -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
+    transform: rotate(-40deg);
   }
 }
 
@@ -84,7 +90,7 @@ body {
   background-color: #7f6677;
   position: absolute;
   -webkit-transform: rotate(-34deg);
-          transform: rotate(-34deg);
+  transform: rotate(-34deg);
   height: calc(100% + 10px);
   width: 20px;
   right: -6px;
@@ -100,7 +106,7 @@ body {
     right: -12px;
     top: -17px;
     -webkit-transform: rotate(-38deg);
-            transform: rotate(-38deg);
+    transform: rotate(-38deg);
     border-radius: 3px;
     border-left: 5px solid #fff;
   }
@@ -177,8 +183,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 25px 24px 50px 38px;
   position: relative;
   z-index: 3;
@@ -193,8 +199,8 @@ body {
 @media only screen and (min-width: 1200px) {
   .header-navbar {
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     padding-top: 25px;
     padding-bottom: 50px;
   }
@@ -282,7 +288,7 @@ body {
 
 .header-navbar > input:checked ~ .header-navbar-bar .header-navbar-bar__item:first-of-type {
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   top: 8px;
 }
 
@@ -294,7 +300,7 @@ body {
 
 .header-navbar > input:checked ~ .header-navbar-bar .header-navbar-bar__item:last-of-type {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   top: 9px;
 }
 
@@ -1137,17 +1143,17 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media only screen and (min-width: 1200px) {
   .footer-top {
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 }
 
@@ -1179,13 +1185,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   color: #fff;
 }
 
@@ -1203,19 +1209,19 @@ body {
 @media only screen and (min-width: 1200px) {
   .footer-info {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding-left: 140px;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
   }
 }
 
@@ -1264,8 +1270,8 @@ body {
 @media only screen and (min-width: 1200px) {
   .footer-logo {
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     width: 200px;
   }
 }
@@ -1285,11 +1291,11 @@ body {
 @media only screen and (min-width: 1200px) {
   .footer-text {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    -ms-flex-order: 3;
+    order: 3;
     text-align: right;
   }
 }
