@@ -38,15 +38,15 @@ body {
 
 .border-shape {
   display: inline-block;
-  color: #fff;
+  color: white;
   border-radius: 2px;
   padding: 0 20px;
-  border: 2px solid #fff;
+  border: 2px solid white;
   font: normal normal normal 14px/27px "Montserrat-Medium";
   @include tablet {
     border-radius: 3px;
     padding: 0 40px;
-    border: 5px solid #fff;
+    border: 5px solid white;
     font: normal normal normal 28px/34px "Montserrat-Medium";
   }
 
@@ -66,14 +66,14 @@ body {
     border-radius: 2px;
     height: calc(100% + 11px);
     width: 20px;
-    border-right: 2px solid #fff;
+    border-right: 2px solid white;
     @include tablet() {
       top: 0px;
       left: -15px;
       border-radius: 3px;
       height: calc(100% + 19px);
       width: 35px;
-      border-right: 5px solid #fff;
+      border-right: 5px solid white;
       -webkit-transform: rotate(-40deg);
       -ms-transform: rotate(-40deg);
       transform: rotate(-40deg);
@@ -91,7 +91,7 @@ body {
     right: -6px;
     top: -10px;
     border-radius: 2px;
-    border-left: 2px solid #fff;
+    border-left: 2px solid white;
     @include tablet() {
       height: calc(100% + 19px);
       width: 30px;
@@ -101,13 +101,13 @@ body {
       -ms-transform: rotate(-38deg);
       transform: rotate(-38deg);
       border-radius: 3px;
-      border-left: 5px solid #fff;
+      border-left: 5px solid white;
     }
   }
 }
 
 .title {
-  color: #fff;
+  color: white;
   position: relative;
   z-index: 2;
   letter-spacing: -1.6px;
@@ -139,7 +139,7 @@ body {
   }
   font-family: "Montserrat-Regular";
   letter-spacing: 0px;
-  color: #fff;
+  color: white;
   z-index: 2;
 }
 
@@ -191,7 +191,7 @@ body {
           height: 8px;
         }
         width: 100%;
-        background-color: #fff;
+        background-color: white;
         top: 0;
         -webkit-transition: all 0.3s;
         -o-transition: all 0.3s;
@@ -330,7 +330,7 @@ body {
           line-height: 1;
         }
         letter-spacing: 0px;
-        color: #ffffff;
+        color: whitefff;
         text-decoration: none;
         font-family: "Montserrat-Bold";
         display: inline-block;
@@ -368,7 +368,7 @@ body {
           position: fixed;
           width: 250px;
           overflow: hidden;
-          background-color: #fff;
+          background-color: white;
           padding-left: 20px;
           -webkit-transition: all 0.5s;
           -o-transition: all 0.5s;
@@ -447,7 +447,7 @@ body {
     }
 
     &__title {
-      color: #fff;
+      color: white;
       width: 100%;
       padding-left: 27px;
       padding-right: 48px;
@@ -649,7 +649,7 @@ body {
   @include tablet() {
     padding-top: 70px;
   }
-  background-color: #fff;
+  background-color: white;
 
   &-desc,
   &-title {
@@ -806,7 +806,7 @@ body {
       }
       font-family: "Montserrat-ExtraBold";
       letter-spacing: -1px;
-      color: #ffffff;
+      color: whitefff;
 
       span {
         display: block;
@@ -843,7 +843,7 @@ body {
           font-size: 20px;
         }
         font-family: "Montserrat-Bold";
-        color: #fff;
+        color: white;
         img {
           width: 10px;
           @include tablet() {
@@ -909,7 +909,7 @@ body {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-    color: #fff;
+    color: white;
   }
 
   &-info {
